@@ -27,6 +27,10 @@ class Graph {
     }
 
     // Breadth First Search
+    /**
+     * Node를 큐를 사용하여 너비 우선 탐색을 수행합니다.
+     * @param {Node} node 
+     */
     bfs(node) {
         if (this.nodes.indexOf(node) < 0) {
             return;
@@ -53,6 +57,10 @@ class Graph {
     }
 
     // Depth First Search
+    /**
+     * Node를 스택을 사용하여 깊이 우선 탐색을 수행합니다.
+     * @param {Node} node 
+     */
     dfs(node) {
         if (this.nodes.indexOf(node) < 0) {
             return;

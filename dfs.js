@@ -7,7 +7,7 @@ class Node {
     }
 }
 
-// 깊이 우선 탐색 stack
+// Depth First Search
 const stack = [];
 const dfs = (node) => {
     node.isMarked = true;

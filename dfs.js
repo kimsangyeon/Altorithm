@@ -9,6 +9,10 @@ class Node {
 
 // Depth First Search
 const stack = [];
+/**
+ * Node를 스택을 사용하여 깊이 우선 탐색을 수행합니다.
+ * @param {Node} node 
+ */
 const dfs = (node) => {
     node.isMarked = true;
 
@@ -29,8 +33,12 @@ const dfs = (node) => {
     }
 };
 
-//깊이 우선 탐색 재귀
-const dfs2 = (node) => {
+// Depth First Search Recursive
+/**
+ * Node를 재귀를 사용하여 깊이 우선 탐색을 수행합니다.
+ * @param {Node} node 
+ */
+const dfsRecursive = (node) => {
     if (node.isMarked) {
         return;
     } 
@@ -39,8 +47,8 @@ const dfs2 = (node) => {
     const left = node.left;
     const right = node.right;
 
-    left && dfs2(left);
-    right && dfs2(right);
+    left && dfsRecursive(left);
+    right && dfsRecursive(right);
 };
 
 const r = new Node(0);
@@ -62,4 +70,4 @@ n2.right = n6;
 n3.left = n7;
 n3.right = n8;
 
-bfs(r);
+dfs(r);

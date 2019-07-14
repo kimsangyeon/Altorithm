@@ -9,6 +9,10 @@ class Node {
 
 // Breadth First Search
 const queue = [];
+/**
+ * Node를 큐를 사용하여 너비 우선 탐색을 수행합니다.
+ * @param {Node} node 
+ */
 const bfs = (node) => {
     node.isMarked = true;
     queue.push(node);

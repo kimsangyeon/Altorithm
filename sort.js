@@ -2,12 +2,14 @@ const numbers = [1,2,3,4,5,10,11];
 
 numbers.sort(); // [1, 10, 11, 2, 3, 4, 5]
 
+// 오름차순
 function ascending(a, b) {
     return a - b;
 }
 
 numbers.sort(ascending); // [1, 2, 3, 4, 5, 10, 11]
 
+// 내림차순
 function descending(a, b) {
     return b - a;
 }

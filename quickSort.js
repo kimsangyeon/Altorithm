@@ -40,10 +40,6 @@ const partition = (arr, begin, end) => {
         arr[right] = tmp;
     }
 
-    tmp = arr[right - 1];
-    arr[right - 1] = arr[begin];
-    arr[begin] = tmp;
-
     return right;
 };
 

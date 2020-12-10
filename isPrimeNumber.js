@@ -14,3 +14,12 @@ const isPrimeNumber = (num) => {
 
     return isPrime;
 };
+
+function isPrimeNumber(num) {
+    if (!Number.isInteger(num)) return false;
+    return new Array(num).fill(null).every((_, idx) => {
+        if (idx + 2 === num) return true;
+        if (idx + 2 > num) return true;
+        return num % (idx + 2) !== 0;
+    });
+}
